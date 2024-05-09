@@ -8,9 +8,35 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-.column {
-    width: 100%;
+header {
+  display: flex;
+  /* changes from the default row, to column */
+  flex-direction: column;
+  /* changes the items to align to center */
+  align-items: center;
 }
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 20%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+h1{
+  display:inline;
+  background-color: white;
+}
+
+/* .column {
+    width: 100%;
+} */
 
 /* Styled for screens 600px wide or more. Covers most mobile screens (600px) */
 /* Can also do @media-screen and (width > 600px) if this makes more sense */
@@ -18,17 +44,37 @@ body {
     body {
         background-color: palegreen;
     }
-    .column {
-        float: left;
-        width: 33.33%;
+
+    header {
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    main {
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 1rem;
+    }
+
+    .main_pa {
+      padding-left: 1rem;
+    }
+
+    }
+  }
+    /* .column {
+        float: left; */
+        /* can cause overlaps using % for width */
+        /* width: 33.33%;
       }
-      
+       */
       /* Clear floats after the columns */
-      .row:after {
+      /* .row:after {
         content: "";
         display: table;
         clear: both;
-      }
+      } */
 }
 
 /* Create three equal columns that float next to each other */
